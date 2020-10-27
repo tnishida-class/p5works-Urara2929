@@ -6,11 +6,12 @@ function setup(){
 function draw() {
   for(let i = 0; i < 10; i++){
     let x = (i + 1)*10;
-    noFill();
     if(i < 5){
+      noFill();
       stroke(0,0,255);
       ellipse(100,100,x);
     } else {
+      noFill();
       stroke(255,0,0);
       ellipse(100,100,x);
     }
