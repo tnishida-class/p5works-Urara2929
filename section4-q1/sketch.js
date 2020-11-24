@@ -3,14 +3,24 @@ let count;
 let cycle;
 
 function setup(){
-  createCanvas(200, 200);
+  createCanvas(windowWidth, windowHeight);
   count = 0;
   cycle = 100;
+}
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function draw(){
   background(160, 192, 255);
   count = (count + 1) % cycle;
   // BLANK[1]
+  let size;
+  if ( count < 50) {
+    size = 100 - count;
+  } else {
+    size = count;
+  }
   ellipse(width / 2, height / 2, size);
 }
